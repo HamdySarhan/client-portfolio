@@ -1,0 +1,153 @@
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.background-main {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+  color: #ffd700;
+  font-style: italic;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+.title1 {
+  font-size: 3rem;
+  margin-top: 15rem;
+
+  text-align: center;
+  width: 80vw;
+  color: white;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  color: white;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: white 0.2rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.2rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  #profile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    height: 80vh;
+  }
+
+  .section__pic-container {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin: auto 0;
+  }
+
+  .background-main {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+  }
+
+  .title1 {
+    margin-top: 25vh;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+
+    color: white;
+  }
+
+  .section__text__p2 {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+
+    color: #ffd700;
+    font-style: italic;
+  }
+}
