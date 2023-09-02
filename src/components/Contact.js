@@ -3,11 +3,13 @@ import './Contact.css';
 import email from '../assets/icons8-email-50.png';
 import facebook from '../assets/icons8-facebook-50.png';
 import phone from '../assets/icons8-phone-50.png';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t, i18n } = useTranslation();
   return (
     <section id='contact'>
-      <h1 class='title-contact'>Contact Me</h1>
+      <h1 class='title-contact'>{t('contact')}</h1>
       <div class='contact-info-upper-container'>
         <div class='contact-info-container'>
           <img

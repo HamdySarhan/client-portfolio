@@ -1,7 +1,8 @@
 import React from 'react';
 import './Case.css';
-
+import { useTranslation } from 'react-i18next';
 const Case = ({ imgSrc, title, description, articleLink }) => {
+  const { t, i18n } = useTranslation();
   return (
     <div className='case-card'>
       <img src={imgSrc}></img>
@@ -10,7 +11,7 @@ const Case = ({ imgSrc, title, description, articleLink }) => {
         <h4>{title}</h4>
         <p>{description}</p>
         <a href={articleLink} target='_blank'>
-          Read more
+          {t('read')}
         </a>
       </div>
     </div>

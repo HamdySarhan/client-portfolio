@@ -6,6 +6,8 @@ import about3 from '../assets/5ce6cb32-36d7-4802-98e5-923448e451c1.png';
 import exp from '../assets/experience.png';
 import arrow from '../assets/arrow.png';
 import { Row, Col } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+
 export default function Experience() {
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +42,10 @@ export default function Experience() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  const { t, i18n } = useTranslation();
   return (
-    <div id='about'>
-      <h1>About Us</h1>
+    <div id='about' style={{ paddingTop: '120px' }}>
+      <h1>{t('about')}</h1>
       <div className='imgAndText1'>
         <div className='imgAboutContainer fade-in-left'>
           <img src={about}></img>

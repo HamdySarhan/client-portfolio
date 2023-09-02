@@ -1,15 +1,16 @@
 import React from 'react';
 import './News.css';
 import news1 from '../assets/background.png';
-
+import { useTranslation } from 'react-i18next';
 export default function News() {
+  const { t, i18n } = useTranslation();
   return (
     <div
       className='big-news-container'
       id='news'
-      style={{ textAlign: 'center', marginTop: '250px' }}
+      style={{ textAlign: 'center', paddingTop: '120px' }}
     >
-      <h1>News</h1>
+      <h1>{t('news')}</h1>
 
       <div className='news-container'>
         <div
@@ -24,7 +25,7 @@ export default function News() {
               href='www.google.com'
               target='_blank'
             >
-              Read more
+              {t('read')}
             </a>
           </div>
         </div>
@@ -40,7 +41,7 @@ export default function News() {
               href='www.google.com'
               target='_blank'
             >
-              Read more
+              {t('read')}
             </a>
           </div>
         </div>
@@ -56,7 +57,7 @@ export default function News() {
               href='www.google.com'
               target='_blank'
             >
-              Read more
+              {t('read')}
             </a>
           </div>
         </div>

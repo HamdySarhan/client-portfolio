@@ -135,11 +135,6 @@ nav {
     background-color: rgba(53, 53, 53, 0.95);
   }
 
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;

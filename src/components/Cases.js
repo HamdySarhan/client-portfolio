@@ -2,20 +2,21 @@ import React from 'react';
 import Case from './Case';
 import './Cases.css';
 import case1img from '../assets/5345088.jpeg';
-
+import { useTranslation } from 'react-i18next';
 const Cases = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div
       style={{
         textAlign: 'center',
-        marginTop: '250px',
+        paddingTop: '120px',
         width: '80%',
         marginLeft: '10%',
         justifyContent: 'center',
       }}
       id='cases'
     >
-      <h1>Cases</h1>
+      <h1>{t('cases')}</h1>
       <div className='cases-container'>
         <div className='case-box'>
           <Case

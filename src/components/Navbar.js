@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/Frame 353.png';
 import background from '../assets/background.png';
+import { useTranslation } from 'react-i18next';
 import './mediaqueries.css';
 import './Navbar.css';
 
@@ -13,6 +14,13 @@ export default function Navbar() {
     console.log(menu);
   };
 
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const currentLanguage = i18n.language;
+    const newLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+    i18n.changeLanguage(newLanguage);
+  };
   return (
     <div>
       <nav id='desktop-nav'>
@@ -25,22 +33,31 @@ export default function Navbar() {
           <ul class='nav-links'>
             <li>
               <a className='a-nav' href='#about'>
-                About Us
+                {t('about')}
               </a>
             </li>
             <li>
               <a className='a-nav' href='#cases'>
-                Cases
+                {t('cases')}
               </a>
             </li>
             <li>
               <a className='a-nav' href='#news'>
-                News
+                {t('news')}
               </a>
             </li>
             <li>
               <a className='a-nav' href='#contact'>
-                Contact
+                {t('contact')}
+              </a>
+            </li>
+            <li>
+              <a
+                className='a-nav'
+                style={{ cursor: 'pointer' }}
+                onClick={toggleLanguage}
+              >
+                {t('lang')}
               </a>
             </li>
           </ul>
@@ -62,22 +79,27 @@ export default function Navbar() {
             <div className='menu-links'>
               <li>
                 <a className='a-nav' href='#about' onClick={() => toggele()}>
-                  About Us
+                  {t('about')}
                 </a>
               </li>
               <li>
                 <a className='a-nav' href='#cases' onClick={() => toggele()}>
-                  Cases
+                  {t('cases')}
                 </a>
               </li>
               <li>
                 <a className='a-nav' href='#news' onClick={() => toggele()}>
-                  News
+                  {t('news')}
                 </a>
               </li>
               <li>
                 <a className='a-nav' href='#contact' onClick={() => toggele()}>
-                  Contact
+                  {t('contact')}
+                </a>
+              </li>
+              <li>
+                <a className='a-nav' href='#' onClick={toggleLanguage}>
+                  {t('lang')}
                 </a>
               </li>
             </div>
