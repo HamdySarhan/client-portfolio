@@ -127,7 +127,9 @@
     width: 40px;
     height: 40px;
   }
-
+  .logoAndParagraph p {
+    font-size: 20px;
+  }
   .fade-in-left {
     opacity: 0;
     transform: translateX(-50px);
