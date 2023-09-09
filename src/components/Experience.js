@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import './Experience.css';
 import about from '../assets/16711600_1852569948345448_8874226866558149545_n.jpg';
 import about2 from '../assets/8f342d89-3e6c-4421-ae37-253abac58961.png';
@@ -9,8 +9,10 @@ import lawyer from '../assets/lawyer.png';
 import arrow from '../assets/arrow.png';
 import { Row, Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import LanguageContext from './LanguageContext';
 
 export default function Experience() {
+  const { language, setLanguage } = useContext(LanguageContext);
   useEffect(() => {
     const handleScroll = () => {
       const fadeElementsLeft = document.querySelectorAll('.fade-in-left');
@@ -56,7 +58,7 @@ export default function Experience() {
           <div>
             <img src={law}></img>
           </div>
-          <p>{t('paragraph1')}</p>
+          <p dir={language == 'ar' ? 'rtl' : 'ltr'}>{t('paragraph1')}</p>
         </div>
       </div>
       <div className='imgAndText1'>
@@ -64,7 +66,7 @@ export default function Experience() {
           <div>
             <img src={exp}></img>
           </div>
-          <p>{t('paragraph2')}</p>
+          <p dir={language == 'ar' ? 'rtl' : 'ltr'}>{t('paragraph2')}</p>
         </div>
         <div className='imgAboutContainer fade-in-right'>
           <img src={about2}></img>
@@ -78,7 +80,7 @@ export default function Experience() {
           <div>
             <img src={lawyer}></img>
           </div>
-          <p>{t('paragraph3')}</p>
+          <p dir={language == 'ar' ? 'rtl' : 'ltr'}>{t('paragraph3')}</p>
         </div>
       </div>
     </div>
