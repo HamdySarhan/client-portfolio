@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import logo from '../assets/Frame 353.png';
 import logoarab from '../assets/logoarabic.png';
 import background from '../assets/background.png';
@@ -32,9 +32,13 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
+      let offset = 0;
+      if (window.innerHeight > 800) offset = 800;
+      else offset = 500;
+
       // if scroll is less than the viewport height, set background to transparent
       // otherwise set it to black
-      if (currentScrollY < window.innerHeight - 800) {
+      if (currentScrollY < window.innerHeight - offset) {
         setBackgroundColor('rgba(53, 53, 53, 0.25)');
       } else {
         setBackgroundColor('rgba(53, 53, 53, 0.95)');

@@ -165,7 +165,7 @@ nav {
     display: grid;
     top: 13vh;
     left: 0;
-    height: 87vh;
+    height: 67vh;
     transition: ease-in-out 0.2s;
   }
 }
