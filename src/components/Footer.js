@@ -22,7 +22,13 @@ export default function Footer() {
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 Hamdy Sarhan. All Rights Reserved.</p>
+      <p>
+        Copyright &#169; 2023{' '}
+        <a href='https://www.hamdysarhan.com' target='_blank'>
+          Hamdy Sarhan
+        </a>
+        . All Rights Reserved.
+      </p>
     </footer>
   );
 }

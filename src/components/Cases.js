@@ -1,9 +1,13 @@
 import React from 'react';
 import Case from './Case';
 import './Cases.css';
-import case1img from '../assets/5345088.jpeg';
+import case1 from '../assets/case1.png';
+import case2 from '../assets/case2.png';
+import case4 from '../assets/case4.png';
+import case5 from '../assets/case5.png';
+import case6 from '../assets/case6.png';
 import { useTranslation } from 'react-i18next';
-const Cases = () => {
+const Cases = (lang) => {
   const { t, i18n } = useTranslation();
   return (
     <div
@@ -20,50 +24,51 @@ const Cases = () => {
       <div className='cases-container'>
         <div className='case-box'>
           <Case
-            imgSrc={case1img}
-            title='Case1'
-            description='test test test test test testtest test testtest test testtest test testtest test test'
-            articleLink='https://www.alkhaleej.ae/2023-08-20/%D8%B4%D9%83%D9%88%D9%89-%D9%83%D9%8A%D8%AF%D9%8A%D8%A9-%D8%B9%D9%84%D9%89-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%AD%D9%83%D9%85%D8%A9-%D8%AA%D8%A8%D8%B1%D8%A6%D9%87%D8%A7/%D8%AD%D9%88%D8%A7%D8%AF%D8%AB-%D9%88%D9%82%D8%B6%D8%A7%D9%8A%D8%A7/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%AF%D8%A7%D8%B1?utm_campaign=nabdapp.com&utm_medium=referral&utm_source=nabdapp.com&ocid=Nabd_App&fbclid=IwAR0vjc-qrBDws1O3vd6jrsMhh1heXNVmTI9jUg928_r8tXzIZD6Slwkr4hQ'
+            lang={lang}
+            imgSrc={case1}
+            title={t('case1')}
+            description={t('case1description')}
+            articleLink='https://www.emaratalyoum.com/local-section/accidents/2023-09-03-1.1779703?fbclid=IwAR2M4_nm6jfhLM_pVgwV2ApI9XoUNyYYTuyGAPo7qRAP_UIh_gVXmlfNtvA'
           ></Case>
         </div>
         <div className='case-box'>
           <Case
-            imgSrc={case1img}
-            title='Case 2'
-            description='test test test test test testtest test testtest test testtest test testtest test test'
-            articleLink='www.google.com'
+            imgSrc={case2}
+            title={t('case2')}
+            description={t('case2description')}
+            articleLink='https://www.emaratalyoum.com/local-section/accidents/2023-01-22-1.1710578?fbclid=IwAR2vJHxIvpim9a0RVZli9H273vfYY9xseTsNr54ncvBOc03spXMV35m5OWY'
           ></Case>
         </div>
         <div className='case-box'>
           <Case
-            imgSrc={case1img}
-            title='Case 3'
-            description='test test test test test testtest test testtest test testtest test testtest test test'
-            articleLink='www.google.com'
+            imgSrc={case2}
+            title={t('case3')}
+            description={t('case3description')}
+            articleLink='https://www.emaratalyoum.com/local-section/accidents/2022-03-04-1.1606429?fbclid=IwAR07wxF_n1kY_KqWyo6qWENlBgS3gOVWSWgfJS-Lq5q8a-UB_jd7ESGHlbE'
           ></Case>
         </div>
         <div className='case-box'>
           <Case
-            imgSrc={case1img}
-            title='test'
-            description='test test test test test testtest test testtest test testtest test testtest test test'
-            articleLink='www.google.com'
+            imgSrc={case4}
+            title={t('case4')}
+            description={t('case4description')}
+            articleLink='https://www.emaratalyoum.com/local-section/accidents/2021-04-11-1.1476703?fbclid=IwAR2SHqWiVj8J-C5n2gWO-kDxRT_D2mCXDPXwsvfnOXMbKtfbTTltPxcOUCs'
           ></Case>
         </div>
         <div className='case-box'>
           <Case
-            imgSrc={case1img}
-            title='test'
-            description='test test test test test testtest test testtest test testtest test testtest test test'
-            articleLink='www.google.com'
+            imgSrc={case5}
+            title={t('case5')}
+            description={t('case5description')}
+            articleLink='https://www.emaratalyoum.com/local-section/accidents/2020-09-30-1.1404056?fbclid=IwAR2En9pqwlKiw7tNIoj4vciqQhoUHPdni05gKFiT_rQBtzW-5daYOEmDtnA'
           ></Case>
         </div>
         <div className='case-box'>
           <Case
-            imgSrc={case1img}
-            title='test'
-            description='test test test test test testtest test testtest test testtest test testtest test test'
-            articleLink='www.google.com'
+            imgSrc={case6}
+            title={t('case6')}
+            description={t('case6description')}
+            articleLink='https://www.emaratalyoum.com/local-section/accidents/2020-09-16-1.1398966?fbclid=IwAR2PapZlvqV9pJftgxXj2ORzqEduC0pxLPejz6BU86S2E211uirLnIcMdZM'
           ></Case>
         </div>
       </div>

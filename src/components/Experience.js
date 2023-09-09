@@ -4,6 +4,8 @@ import about from '../assets/16711600_1852569948345448_8874226866558149545_n.jpg
 import about2 from '../assets/8f342d89-3e6c-4421-ae37-253abac58961.png';
 import about3 from '../assets/5ce6cb32-36d7-4802-98e5-923448e451c1.png';
 import exp from '../assets/experience.png';
+import law from '../assets/law.png';
+import lawyer from '../assets/lawyer.png';
 import arrow from '../assets/arrow.png';
 import { Row, Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
@@ -52,13 +54,9 @@ export default function Experience() {
         </div>
         <div className='logoAndParagraph fade-in-right'>
           <div>
-            <img src={exp}></img>
+            <img src={law}></img>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-            reprehenderit et laborum, rem, dolore eum quod voluptate
-            exercitationem nobis.
-          </p>
+          <p>{t('paragraph1')}</p>
         </div>
       </div>
       <div className='imgAndText1'>
@@ -66,11 +64,7 @@ export default function Experience() {
           <div>
             <img src={exp}></img>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-            reprehenderit et laborum, rem, dolore eum quod voluptate
-            exercitationem nobis.
-          </p>
+          <p>{t('paragraph2')}</p>
         </div>
         <div className='imgAboutContainer fade-in-right'>
           <img src={about2}></img>
@@ -82,13 +76,9 @@ export default function Experience() {
         </div>
         <div className='logoAndParagraph fade-in-right'>
           <div>
-            <img src={exp}></img>
+            <img src={lawyer}></img>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-            reprehenderit et laborum, rem, dolore eum quod voluptate
-            exercitationem nobis.
-          </p>
+          <p>{t('paragraph3')}</p>
         </div>
       </div>
     </div>

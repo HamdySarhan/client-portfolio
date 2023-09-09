@@ -20,54 +20,19 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
 import News from './News';
-const caseData = [
-  {
-    imgSrc: '../assets/5345088.jpeg',
-    title: 'Case 1',
-    description: 'Description 1',
-    articleLink: '#1',
-  },
-  {
-    imgSrc: '../assets/5345088.jpeg',
-    title: 'Case 2',
-    description: 'Description 2',
-    articleLink: '#2',
-  },
-  {
-    imgSrc: '../assets/5345088.jpeg',
-    title: 'Case 3',
-    description: 'Description 3',
-    articleLink: '#3',
-  },
-  {
-    imgSrc: '../assets/5345088.jpeg',
-    title: 'Case 1',
-    description: 'Description 1',
-    articleLink: '#1',
-  },
-  {
-    imgSrc: '../assets/5345088.jpeg',
-    title: 'Case 2',
-    description: 'Description 2',
-    articleLink: '#2',
-  },
-  {
-    imgSrc: '../assets/5345088.jpeg',
-    title: 'Case 3',
-    description: 'Description 3',
-    articleLink: '#3',
-  },
-  // ... add more cases as needed
-];
+import LanguageProvider from './LanguageProvider';
+
 const Home = () => (
   <div>
-    <Navbar></Navbar>
-    <Profile></Profile>
-    <Experience></Experience>
-    <Cases caseData={caseData}></Cases>
-    <News></News>
-    <Contact></Contact>
-    <Footer></Footer>
+    <LanguageProvider>
+      <Navbar></Navbar>
+      <Profile></Profile>
+      <Experience></Experience>
+      <Cases></Cases>
+      <News></News>
+      <Contact></Contact>
+      <Footer></Footer>
+    </LanguageProvider>
   </div>
 );
 

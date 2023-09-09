@@ -50,6 +50,11 @@
   height: 40px;
 }
 
+.logoAndParagraph p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
 .fade-in-left {
   opacity: 0;
   transform: translateX(-50px);
